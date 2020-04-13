@@ -15,11 +15,13 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MatrixTest {
-
+	
 	@Test
 	public void determinantTest_1x1Matrix_singleElement() {
 		int[][] matrix = {{1}};
 		assertEquals(1, Matrix.determinant(matrix));
+		int[][] matrix2 = {{2}};
+		assertEquals(2, Matrix.determinant(matrix2));
 	}
 
 }
