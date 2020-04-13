@@ -13,7 +13,10 @@ package codewarsMatrixDeterminant;
 public class Matrix {
 	
 	static int determinant(int[][] matrix) {
-		return matrix[0][0];
+		if(matrix[0].length == 1) {
+			return matrix[0][0];
+		}
+		return 0;
 	}
 	
 }

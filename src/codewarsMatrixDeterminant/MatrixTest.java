@@ -23,5 +23,11 @@ public class MatrixTest {
 		int[][] matrix2 = {{2}};
 		assertEquals(2, Matrix.determinant(matrix2));
 	}
+	
+	@Test
+	public void determinantTest_2x2Matrix_singleElement() {
+		int[][] matrix = {{1,1},{1,1}};
+		assertEquals(0, Matrix.determinant(matrix));
+	}
 
 }
