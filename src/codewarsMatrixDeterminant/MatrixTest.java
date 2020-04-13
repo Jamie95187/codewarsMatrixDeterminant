@@ -28,6 +28,8 @@ public class MatrixTest {
 	public void determinantTest_2x2Matrix_singleElement() {
 		int[][] matrix = {{1,1},{1,1}};
 		assertEquals(0, Matrix.determinant(matrix));
+		int[][] matrix2 = {{1,2},{3,4}};
+		assertEquals(-2, Matrix.determinant(matrix2));
 	}
 
 }
