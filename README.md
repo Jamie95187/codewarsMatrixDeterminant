@@ -41,3 +41,33 @@ the determinant is: `a * det(a_minor) - b * det(b_minor) + c * det(c_minor)` whe
 The determinant of larger matrices are calculated analogously, e.g. if M is a 4x4 matrix with first row `[a, b, c, d]`, then:
 
 `det(M) = a * det(a_minor) - b * det(b_minor) + c * det(c_minor) - d * det(d_minor)`
+
+## Tests
+
+Tested with Junit 4 in the Eclipse IDE.
+
+```
+@Test
+public void determinantTest_1x1Matrix_singleElement() {
+	int[][] matrix = {{1}};
+	assertEquals(1, Matrix.determinant(matrix));
+	int[][] matrix2 = {{2}};
+	assertEquals(2, Matrix.determinant(matrix2));
+}
+
+@Test
+public void determinantTest_2x2Matrix_singleElement() {
+	int[][] matrix = {{1,1},{1,1}};
+	assertEquals(0, Matrix.determinant(matrix));
+	int[][] matrix2 = {{1,2},{3,4}};
+	assertEquals(-2, Matrix.determinant(matrix2));
+}
+
+@Test
+public void determinantTest_3x3Matrix_singleElement() {
+	int[][] matrix = {{1,1,1},{1,0,1},{0,0,0}};
+	assertEquals(0, Matrix.determinant(matrix));
+	int[][] matrix2 = {{2,1,3},{1,2,4},{3,1,1}};
+	assertEquals(-6, Matrix.determinant(matrix2));
+}
+```
