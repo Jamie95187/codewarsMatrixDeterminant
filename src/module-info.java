@@ -1,2 +1,3 @@
 module codewarsMatrixDeterminant {
+	requires junit;
 }
