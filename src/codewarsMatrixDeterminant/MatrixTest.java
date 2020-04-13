@@ -36,6 +36,8 @@ public class MatrixTest {
 	public void determinantTest_3x3Matrix_singleElement() {
 		int[][] matrix = {{1,1,1},{1,0,1},{0,0,0}};
 		assertEquals(0, Matrix.determinant(matrix));
+		int[][] matrix2 = {{2,1,3},{1,2,4},{3,1,1}};
+		assertEquals(-6, Matrix.determinant(matrix2));
 	}
 
 }
