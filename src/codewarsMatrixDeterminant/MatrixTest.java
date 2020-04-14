@@ -38,6 +38,8 @@ public class MatrixTest {
 		assertEquals(0, Matrix.determinant(matrix));
 		int[][] matrix2 = {{2,1,3},{1,2,4},{3,1,1}};
 		assertEquals(-8, Matrix.determinant(matrix2));
+		int[][] matrix3 = {{3,2,9},{2,4,4},{6,3,6}};
+		assertEquals(-102, Matrix.determinant(matrix3));
 	}
 	
 //	@Test
