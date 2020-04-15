@@ -25,7 +25,7 @@ public class MatrixTest {
 	}
 	
 	@Test
-	public void determinantTest_2x2Matrix_singleElement() {
+	public void determinantTest_2x2Matrix_correctDeterminant() {
 		int[][] matrix = {{1,1},{1,1}};
 		assertEquals(0, Matrix.determinant(matrix));
 		int[][] matrix2 = {{1,2},{3,4}};
@@ -33,7 +33,7 @@ public class MatrixTest {
 	}
 	
 	@Test
-	public void determinantTest_3x3Matrix_singleElement() {
+	public void determinantTest_3x3Matrix_correctDeterminant() {
 		int[][] matrix = {{1,1,1},{1,0,1},{0,0,0}};
 		assertEquals(0, Matrix.determinant(matrix));
 		int[][] matrix2 = {{2,1,3},{1,2,4},{3,1,1}};
@@ -43,9 +43,24 @@ public class MatrixTest {
 	}
 	
 	@Test
-	public void determinantTest_4x4Matrix_singleElement() {
+	public void determinantTest_4x4Matrix_correctDeterminant() {
 		int[][] matrix = {{1,1,1,1},{1,2,1,4},{1,2,3,3},{2,3,1,3}};
 		assertEquals(-5, Matrix.determinant(matrix));
 	}
 
+	@Test
+	public void determinantTest_9x9Matrix_correctDeterminant() {
+		int[][] matrix = {
+			{2, 7, 8, 6, 5, 3, 3, 5, 7},
+			{0, 7, 6, 4, 5, 6, 7, 8, 5},
+			{5, 8, 5, 8, 6, 8, 6, 8, 8},
+			{1, 4, 6, 3, 2, 4, 6, 8, 6},
+			{5, 3, 4, 6, 7, 9, 0, 7, 5},
+			{4, 5, 6, 7, 5, 3, 2, 3, 5},
+			{8, 9, 6, 3, 2, 3, 4, 2, 5},
+			{2, 2, 2, 5, 6, 3, 8, 1, 2},
+			{2, 9, 7, 5, 3, 2, 1, 1, 2}
+		};
+		assertEquals(813888, Matrix.determinant(matrix));
+	}
 }

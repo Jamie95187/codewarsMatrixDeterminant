@@ -78,6 +78,4 @@ public class Matrix {
 		return determinant;
 	}
 	
-	
-	
 }
