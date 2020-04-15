@@ -42,10 +42,10 @@ public class MatrixTest {
 		assertEquals(-102, Matrix.determinant(matrix3));
 	}
 	
-//	@Test
-//	public void determinantTest_4x4Matrix_singleElement() {
-//		int[][] matrix = {{1,1,1,1},{1,2,1,4},{1,2,3,3},{2,3,1,3}};
-//		assertEquals(0, Matrix.determinant(matrix));
-//	}
+	@Test
+	public void determinantTest_4x4Matrix_singleElement() {
+		int[][] matrix = {{1,1,1,1},{1,2,1,4},{1,2,3,3},{2,3,1,3}};
+		assertEquals(-5, Matrix.determinant(matrix));
+	}
 
 }
